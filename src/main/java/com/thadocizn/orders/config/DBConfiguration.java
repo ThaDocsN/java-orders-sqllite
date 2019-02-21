@@ -7,11 +7,9 @@ import org.springframework.context.annotation.Configuration;
 import javax.sql.DataSource;
 
 @Configuration
-public class DBConfiguration
-{
+public class DBConfiguration {
     @Bean
-    public DataSource dataSource()
-    {
+    public DataSource dataSource() {
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.driverClassName("org.sqlite.JDBC");
         dataSourceBuilder.url("jdbc:sqlite:orders.db");
