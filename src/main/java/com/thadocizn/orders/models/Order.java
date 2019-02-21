@@ -8,17 +8,16 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long ordNum;
-    @Column
     private double ordAmount;
-    @Column
     private double advanceAmount;
     @ManyToOne
     @JoinColumn(name = "custCode")
     private Customer custCode;
+
     @ManyToOne
     @JoinColumn(name = "agentCode")
     private Agent agentCode;
-    @Column
+
     private String ordDescription;
 
     public Order() {

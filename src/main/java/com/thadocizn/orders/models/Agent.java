@@ -9,15 +9,11 @@ public class Agent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long agentCode;
-    @Column
+    @Column(nullable = false)
     private String agentName;
-    @Column
     private String workingArea;
-    @Column
     private double commission;
-    @Column
     private String phone;
-    @Column
     private String country;
 
     public Agent() {

@@ -13,24 +13,17 @@ public class Customer {
     private long custCode;
     @Column(nullable = false)
     private String custName;
-    @Column
+
     private String custCity;
-    @Column
     private String workingArea;
-    @Column
     private String custCountry;
-    @Column
     private String grade;
-    @Column
     private double openingAmt;
-    @Column
     private double receiveAmt;
-    @Column
     private double paymentAmt;
-    @Column
     private double outstandingAmt;
-    @Column
     private String phone;
+
     @ManyToOne
     @JoinColumn(name = "agentCode")
     @JsonIgnore
