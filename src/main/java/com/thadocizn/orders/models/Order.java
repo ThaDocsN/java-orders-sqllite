@@ -8,8 +8,12 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long ordNum;
+
     private double ordAmount;
     private double advanceAmount;
+    private String ordDescription;
+
+
     @ManyToOne
     @JoinColumn(name = "custCode")
     private Customer custCode;
@@ -18,7 +22,6 @@ public class Order {
     @JoinColumn(name = "agentCode")
     private Agent agentCode;
 
-    private String ordDescription;
 
     public Order() {
     }
