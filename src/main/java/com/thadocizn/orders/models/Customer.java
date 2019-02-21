@@ -31,10 +31,10 @@ public class Customer {
     private double outstandingAmt;
     @Column
     private String phone;
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "agentCode")
     @JsonIgnore
-    private long agentCode;
+    private Agent agentCode;
 
     public Customer() {
     }
@@ -127,11 +127,4 @@ public class Customer {
         this.phone = phone;
     }
 
-    public long getAgentCode() {
-        return agentCode;
-    }
-
-    public void setAgentCode(long agentCode) {
-        this.agentCode = agentCode;
-    }
 }

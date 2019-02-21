@@ -12,12 +12,12 @@ public class Order {
     private double ordAmount;
     @Column
     private double advanceAmount;
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "custCode")
-    private long custCode;
-    @OneToMany
+    private Customer custCode;
+    @ManyToOne
     @JoinColumn(name = "agentCode")
-    private long agentCode;
+    private Agent agentCode;
     @Column
     private String ordDescription;
 
@@ -46,22 +46,6 @@ public class Order {
 
     public void setAdvanceAmount(double advanceAmount) {
         this.advanceAmount = advanceAmount;
-    }
-
-    public long getCustCode() {
-        return custCode;
-    }
-
-    public void setCustCode(long custCode) {
-        this.custCode = custCode;
-    }
-
-    public long getAgentCode() {
-        return agentCode;
-    }
-
-    public void setAgentCode(long agentCode) {
-        this.agentCode = agentCode;
     }
 
     public String getOrdDescription() {
