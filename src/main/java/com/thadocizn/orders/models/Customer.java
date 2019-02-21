@@ -87,6 +87,10 @@ public class Customer {
         return openingAmt;
     }
 
+    public void setCustCode(long custCode) {
+        this.custCode = custCode;
+    }
+
     public void setOpeningAmt(double openingAmt) {
         this.openingAmt = openingAmt;
     }

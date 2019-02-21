@@ -28,6 +28,10 @@ public class Order {
         return ordNum;
     }
 
+    public void setOrdNum(long ordNum) {
+        this.ordNum = ordNum;
+    }
+
     public double getOrdAmount() {
         return ordAmount;
     }

@@ -28,6 +28,10 @@ public class Agent {
         return agentCode;
     }
 
+    public void setAgentCode(long agentCode) {
+        this.agentCode = agentCode;
+    }
+
     public String getAgentName() {
         return agentName;
     }
